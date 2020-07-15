@@ -1,0 +1,48 @@
+{
+  "Produits": [
+    {
+      "id": 3,
+      "nom": "Samsung Galaxy S10e 128 go Noir - Double simm",
+      "prix": "479€99",
+      "quantite": "7"
+    },
+    {
+      "id": 4,
+      "nom": "APPLE iPhone 11 Noir 64 Go",
+      "prix": "817€09",
+      "quantite": "6"
+    },
+    {
+      "id": 5,
+      "nom": "HUAWEI P40 Lite E Aurora Blue 64 Go",
+      "prix": "176€86",
+      "quantite": 8
+    }
+  ],
+  "commandes": [
+    {
+      "id": "",
+      "date": "",
+      "prixTotal": "",
+      "montant": ""
+    },
+    {
+      "id": "BiyYP17"
+    },
+    {
+      "id": "1VyRBwW"
+    },
+    {
+      "id": "EDPD7Lm"
+    },
+    {
+      "id": "ilFIKb6"
+    },
+    {
+      "id": "TCHJJQk"
+    },
+    {
+      "id": "_00IAl2"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+
+<div class="col-md-8 mx-auto panel panel-default">
+    <div class="panel-heading">
+       <h3>Liste des commandes</h3> 
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tr>
+                <th>nom</th>
+                <th>Date</th>
+                <th>prixTotal</th>
+                <th>montant</th>
+            </tr>
+            <tr *ngFor="let c of cmd">
+                <td>{{c.nom}}</td>
+                <td>{{date | date:'yyyy-MM-dd'}}</td>
+                <td>{{c.prixTotal|number:'0.2'}}</td>
+                <td>v{{c.montant|number:'0.2'}}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm">
+                        <i class="fa fa-pencil"></i>
+                    </button>
+                </td>
+                <td>
+                    <button class="btn btn-sm btn-dark pr-10">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+            
+        </table>
+        <button class="btn btn-success" >Commander</button>
+    </div>
+
+</div>

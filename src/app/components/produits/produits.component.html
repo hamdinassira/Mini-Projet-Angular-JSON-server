@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-md-6">
+        <h3>Liste de produits</h3>
+    </div>
+    <div class="col-md-6 text-right">
+        <button (click)="showForm = !showForm" class="btn btn-dark btn-sm">
+            <i class="fa fa-plus"></i>Nouveau produit
+        </button>
+    </div>
+</div>
+<div class="row" *ngIf="showForm">
+    <div class="col-md-6 mx-auto">
+
+        <div class="form-group my-2">
+            <label for="nom">nom</label>
+            <input [(ngModel)]="monProduit.nom" type="text" class="form-control" name="nom" id="nom"
+                placeholder="Nom Produit">
+        </div>
+
+        <div class="form-group my-2">
+            <label for="prix">prix</label>
+            <input [(ngModel)]="monProduit.prix" type="text" class="form-control" name="prix" id="prix"
+                placeholder="Prix Unitaire">
+        </div>
+
+        <div class="form-group my-2">
+            <label for="quantite">quantite</label>
+            <input [(ngModel)]="monProduit.quantite" type="text" class="form-control" name="quantite" id="quantite"
+                placeholder="Quantite">
+        </div>
+        <button *ngIf="!editForm" (click)="addProduct()" class="btn btn-success btn-block">
+            <i class="fa fa-send"></i>Nouveau Produit
+        </button>
+        <button *ngIf="editForm" (click)="editProduct()" class="btn btn-warning btn-block">
+            <i class="fa fa-refresh"></i>Modifier Produit
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <ul class="list-group">
+            <li *ngFor="let produit of produits"
+                class="list-group-item d-flex justify-content-between align-items-center">
+                <button  (click)="updateProduct(produit)" class="btn btn-warning btn-sm">
+                    <i class="fa fa-pencil"></i>
+                </button>
+                     <span scope="row">{{produit.nom}}</span>
+                     <span class="badge badge-danger badge-pill text-left"> {{produit.prix}} </span>
+                     <span class="badge badge-primary badge-pill">{{produit.quantite}} </span>
+                <button class="btn btn-sm btn-dark pr-10" (click)="deleteProduct(produit.id)">
+                    <i class="fa fa-trash"></i>
+                </button>
+                <button  (click)="AjoutPanier(produit)">
+                    <img src="assets/images/caddy.png">
+                </button>               
+            </li>
+        </ul>
+    </div>
+</div>
